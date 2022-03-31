@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const mongoose = require("mongoose");
 
 const authjwt = require("./helper/authjwt");
+const error_handler = require("./helper/error-handler");
 
 app.use(cors());
 app.options("*", cors());
@@ -16,6 +17,7 @@ const api = process.env.API_URL;
 app.use(express.json());
 app.use(morgan("tiny"));
 app.use(authjwt());
+app.use(error_handler);
 
 //Routers
 const prayertimeRouter = require("./router/prayertime");
