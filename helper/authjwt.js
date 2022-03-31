@@ -6,7 +6,7 @@ function authjwt() {
   return jwt({
     secret,
     algorithms: ["HS256"],
-    isRevoked,
+    isRevoked: isRevoked,
   }).unless({
     path: [
       { url: /\/api\/v1\/prayertimes(.*)/, methods: ["GET", "OPTION"] },
