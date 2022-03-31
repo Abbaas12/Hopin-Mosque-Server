@@ -10,7 +10,6 @@ function authjwt() {
   }).unless({
     path: [
       { url: /\/api\/v1\/prayertimes(.*)/, methods: ["GET", "OPTION"] },
-      { url: /\/api\/v1\/fastings(.*)/, methods: ["GET", "OPTION"] },
       { url: /\/api\/v1\/advertisings(.*)/, methods: ["GET", "OPTION"] },
       { url: /\/api\/v1\/jamaeaes(.*)/, methods: ["GET", "OPTION"] },
       { url: /\/api\/v1\/users(.*)/, methods: ["GET", "OPTION"] },
